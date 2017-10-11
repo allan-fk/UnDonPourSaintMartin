@@ -1,0 +1,117 @@
+.payment-submit {
+    margin: 40px 0;
+}
+
+.paiement-item .div {
+    padding: 0;
+    margin: 0;
+}
+
+.paiement-item .verti {
+    height: 165px;
+}
+.paiement-item .verti .cb,
+.paiement-item .verti .pp,
+.paiement-item .verti .paylib,
+.paiement-item .verti .ch,
+.paiement-item .verti .rb {
+    padding-top: 60px;
+    font-size: 15px;
+    font-weight: normal;
+    height: 153px;
+    min-height: 153px;
+    text-align: center;
+}
+.paiement-item .custom{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -8px;
+}
+
+.verti .cb {
+    background-image: url("https://libs.iraiser.eu/users/fdf/cb.png");
+    background-repeat: no-repeat;
+    background-position: 50% bottom;
+    padding-bottom: 80px
+}
+
+.verti.selected .cb,
+.verti:hover .cb {
+    background-image: url("https://libs.iraiser.eu/users/fdf/cb-over.png");
+    background-repeat: no-repeat;
+    background-position: 50% bottom;
+    padding-bottom: 80px
+}
+
+.verti .pp {
+    background-image: url("https://libs.iraiser.eu/users/fdf/pp.png");
+    background-repeat: no-repeat;
+    background-position: 50% bottom;
+    padding-bottom: 80px
+}
+
+.verti.selected .pp,
+.verti:hover .pp {
+    background-image: url("https://libs.iraiser.eu/users/fdf/pp-over.png");
+    background-repeat: no-repeat;
+    background-position: 50% bottom;
+    padding-bottom: 80px
+}
+
+.verti .paylib {
+    background-image: url("https://libs.iraiser.eu/users/fdf/paylib.png");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: 50% 80%;
+    padding-bottom: 80px
+}
+
+.verti.selected .paylib,
+.verti:hover .paylib {
+    background-image: url("https://libs.iraiser.eu/users/fdf/paylib-over.png");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: 50% 80%;
+    padding-bottom: 80px
+}
+
+.verti .ch {
+    background-image: url("https://libs.iraiser.eu/users/fdf/ch.png");
+    background-repeat: no-repeat;
+    background-position: 50% bottom;
+    padding-bottom: 80px
+}
+
+.verti.selected .ch,
+.verti:hover .ch {
+    background-image: url("https://libs.iraiser.eu/users/fdf/ch-over.png");
+    background-repeat: no-repeat;
+    background-position: 50% bottom;
+    padding-bottom: 80px
+}
+
+.verti .rb {
+    background-image: url("https://libs.iraiser.eu/users/fdf/rb.png");
+    background-repeat: no-repeat;
+    background-position: 50% bottom;
+    padding-bottom: 80px
+}
+
+.verti.selected .rb,
+.verti:hover .rb {
+    background-image: url("https://libs.iraiser.eu/users/fdf/rb-over.png");
+    background-repeat: no-repeat;
+    background-position: 50% bottom;
+    padding-bottom: 80px
+}
+
+#cb,
+#ch,
+#pp,
+#rb {
+    display: none
+}
+#paypal-submit {
+    padding: 5px 0 0;
+}

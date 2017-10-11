@@ -1,0 +1,395 @@
+/*
+Theme Name: Donation Form
+Theme URI: http://www.iraiser.eu
+Description:
+Version: 1.0
+Author: i-Raiser
+Author URI: http://www.iraiser.eu
+*/
+
+/*-------------------------------------------------------------------------------------------
+
+INDEX:
+
+1. SETUP
+-1.1 Libraries
+-1.2 Defaults
+
+2. SITE STRUCTURE & APPEARANCE
+-2.1 Containers & Columns
+-2.2 Navigation
+-2.3 Header
+-2.4 Content
+-2.4.1 Step 1
+-2.4.2 Step 2
+-2.4.3 Step 3
+-2.4.4 Greetings & By Postmail
+-2.5 Sidebar
+-2.6 Footer
+
+3. MISC
+-3.1 Buttons
+-3.2 Info Message
+-3.3 Connect Bar
+
+-------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------*/
+/* 1. SETUP */
+/*-------------------------------------------------------------------------------------------*/
+
+/* 1.1 Libraries */
+@import url(core/reset-fonts.css); /* YUI Reset-Fonts 2.9.0 */
+@import url(core/grids.css); /* OOCSS Grid 8b59c19 */
+@import url(core/grids-mqueries.css); /* MQueries Grid */
+
+/* 1.2 Defaults */
+html {height: 100%;}
+body {min-height: 100%; font-family: Arial,Helvetica,Sans-serif; color: #333; /* padding-top: 34px;*/}
+
+h1, h2, h3, h4, h5, h6 {margin: 0;}
+h1, .h1{font-size:196%;}
+h2, .h2{font-size:167%;}
+h3, .h3{font-size:146.5%;}
+h4, .h4{font-size:123.1%;}
+h5, .h5{font-size:108%; font-weight:bold;}
+h6, .h6{font-size:108%; font-style:italic;}
+
+strong {font-weight: bold;}
+
+/* ====== Default spacing ====== */
+h1, h2, h3, h4, h5, h6, ul, ol, p, legend {padding:10px;}
+h2, h3, h4, h5, h6,img{padding-bottom:0px;}
+
+hr {background-color: #e6e6e6; border:0; height: 1px; margin-bottom: 20px;}
+
+input, textarea {font-family: sans-serif; padding: 2px; border: 1px solid #7c7c7c #c3c3c3 #ddd;}
+select {padding: 2px;}
+
+.radio-inline input, .radio-desc input, #card-type input, .button {border: none;} /* IE7 */
+
+ul[data-type=radio] { padding-bottom: 0px; padding-top: 0px;}
+p[data-type=radio] { padding-bottom: 0px; }
+
+
+/*-------------------------------------------------------------------------------------------*/
+/* 2. SITE STRUCTURE & APPEARANCE */
+/*-------------------------------------------------------------------------------------------*/
+
+/* 2.1 Containers & Columns */
+#container, #header, #main {overflow: hidden;}
+#content, #sidebar {padding-top: 10px; overflow: hidden;}
+#footer {padding: 2px 0;}
+
+.step-title, .step-info {padding: 0 10px; overflow: hidden;}
+.step-content {padding: 10px;}
+
+.center {margin: 0 auto; text-align: center;}
+
+.sizecustom10 {width: 9%;} /* IE 7 */
+.sizecustom13 {width: 13%;}
+.sizecustom16 {width: 16%;}
+.sizecustom30 {width: 30%;}
+.sizecustom45 {width: 45%;}
+
+/* 2.2 Navigation */
+.inline li {display: inline;}
+
+#lang {text-align: center;} /* Mettre left ConnectBar active */
+
+#navbar {padding: 10px 0;}
+
+#step-nav ul li {margin-right: 20px;}
+#step-nav ul li a {text-decoration: none;}
+
+#navbar #security-info {padding: 5px 0; text-align: right;}
+
+.table {
+    display: table !important;
+    border-collapse: separate;
+    border-spacing: 3px 0px;
+}
+.column {
+    display: table-cell;
+    vertical-align: top;
+}
+
+/* 2.3 Header */
+#logo h1, #logo a, #logo img {float: left; overflow: hidden;}
+ 
+/* 2.4 Content */
+.bloc {border: 1px solid;}
+.bloc-content {padding: 10px;}
+
+#content-container {margin-bottom: 10px; margin-left: 10px; overflow: hidden;}
+
+.step-title h2 {padding: 10px;}
+
+.step-info {padding-bottom: 10px;}
+.step-info ul {margin-left: 15px;}
+.step-info ul li {list-style: disc; padding-bottom: 10px;}
+
+#type-b .step-info h4, #type-c .step-info h4 {padding-top: 20px;}
+
+.renew-info {margin-bottom: 10px;}
+#security-info p {padding: 0; text-align: right;}
+
+/* 2.4.1 Step 1 */
+.radio-desc li {width: 100%; overflow: hidden; padding-bottom: 10px;}
+.radio-desc label {float: left; padding-right: 10px;}
+.radio-desc p {margin-left: 65px; padding: 0;}
+
+.radio-inline li {float: left; text-align: center; margin: 0 10px; padding-bottom: 10px;}
+.radio-inline span {display: block;}
+
+#or {text-align: center; text-transform: uppercase;}
+#or p {padding: 10px 0px;}
+#type-a #or {margin-top: 80px;}
+#type-a .bis {padding: 0 15%;}
+
+.thumbs {padding: 0; text-align: center; margin-bottom: 10px;}
+
+.type3c #content-container {margin: 0;}
+.type3c .bloc {margin-left: 10px; margin-bottom: 10px;}
+.type3c .amount ul {padding: 0;}
+
+.type2ct {margin-top: 10px;}
+.type2ct .radio-desc {padding: 0;}
+.type2ct .radio-desc img {float: left; padding-right: 10px;}
+.type2ct .radio-desc label {display: block; float: none; padding-right: 0; font-size: 138.5%;}
+.type2ct .radio-desc p {margin: 4px 0 0; display: block;}
+.price {white-space: nowrap;}
+
+/* 2.4.2 Step 2 */
+.hidden {display: none;}
+
+#step-2 label {display: block;}
+#step-2 input {width: 90%;}
+#step-2 input[type="checkbox"] {width: auto;}
+#step-2 input[type="radio"] {width: auto;}
+#step-2 select#country {width: 90%;}
+#step-2 input#postcode, #step-2 input#city {width: 80%;}
+#step-2 input#iscompany {width: auto;}
+#step-2 fieldset {padding: 0 10px;}
+#step-2 fieldset p {padding: 8px 0;}
+
+#type-a #step-2 fieldset {padding: 10px 20px;}
+
+#type-a #step-2 input#email, #type-a #step-2 input#company, #type-a #step-2 select#country {width: 52%;}
+#type-a #step-2 input#lastname {width: 95%}
+#type-a #step-2 input#address1, #type-a #step-2 input#address2, #type-a #step-2 input[type=text][name^=reserved_] {width: 98%;}
+#type-a #step-2 input#city {width: 97%;}
+#type-a .input1of1  {width: 98% !important;}
+#type-a .input2of2 {width: 97.5% !important;}
+
+#type-a #required-info p {margin-right: 20px;}
+
+/* 2.4.3 Step 3 */
+#step-3 .step-content {padding: 10px 0;}
+#step-3 .renew-info, #step-3 .payment {padding: 0 10px;}
+
+#cb-bloc h4, #other-payment-bloc h4, .payment h4 {font-size: 100%;}
+
+#card-type li, #ogone-pm  li {line-height: 1.3;}
+
+#card-expiry span, #card-scode label, #iban label, #bban-de-startdate-input span {display: block;}
+#card-scode {overflow: hidden;}
+#card-scode #scode {float: left; width: 15%;}
+#card-scode .help {float: right; width: 80%;}
+#other-payment {padding-bottom: 5px;}
+
+#step-3 .help {display: block;}
+
+#bban-fr-rib-key {width: 15%;}
+#bban-fr-etab-code, #bban-fr-guichet-code {width:20%;}
+
+#bban-de label, #bban-de #bban-de-startdate-input span, #bban-uk label {display: block;}
+#bban-de #bban-de-startdate-input label, #bban-uk .help {display: inline;}
+#bban-de input[type=text], #iban-input input[type=text], #bic-input input[type=text] {width: 85%;}
+
+/* 2.4.4 Greetings & By Postmail */
+
+#postmail {margin: 30px auto 50px; text-align: center;}
+#greetings {padding-bottom: 10px;}
+#postmail-content {padding: 10px 20px 20px;}
+
+#postmail h2, #greetings h2, #postmail-content h3 {padding:10px;}
+
+.vcard {padding: 10px;}
+
+.greetings-full {margin: 10px; padding: 10px; text-align: center;}
+
+#greetings-text, #postmail-content {text-align: left; padding-right: 20px; padding-left: 20px;}
+#greetings-text h2, #postmail-content h3 {text-align: center;}
+#greetings-text ul, #postmail-content ul {margin-left: 12px;}
+#greetings-text li, #postmail-content li {list-style: outside disc none;}
+#greetings-text em, #postmail-content em {font-style: italic;}
+
+#greetings-text, #greetings-comp {padding-top: 10px; padding-bottom: 10px;}
+#greetings-text strong {font-size: 123.1%;}
+
+#greetings-comp fieldset {padding: 0 50px; text-align: left;}
+#greetings-comp fieldset ul {padding-top: 0;}
+#greetings-comp label {display: block; padding-bottom: 2px;}
+#greetings-comp textarea {width: 99.8%; height: 60px;}
+#greetings-comp input[type=text] {width: 60%;}
+#greetings-comp .submit {text-align: center;}
+#greetings-comp .submit input {margin: 10px; padding: 4px 10px; font-weight: bold; text-transform: uppercase;}
+
+.greetings-full #social-share {margin-bottom: 10px;}
+
+#social-share {clear: both; padding: 10px;}
+#share-title h2 {text-transform: uppercase; margin-bottom: 10px; padding: 0;}
+
+#fb-bloc {text-align: left; padding: 10px; background: #fff; border: 1px solid #D8DFEA;}
+
+#fb-bloc h3, #fb-bloc p {font: 11px/normal "lucida grande",tahoma,verdana,arial,sans-serif; padding: 0;}
+#fb-bloc h3 {color: #3B5998; font-weight: bold;}
+#fb-link {color: #3B5998;}
+#fb-bloc img {margin-right: 10px;}
+#fb-user {margin-bottom: 5px;}
+#fb-mts {margin-top: 5px; color: gray;}
+
+#fb-logo{
+    max-width: 90px;
+    max-height:90px;
+    margin-left:5px;
+    margin-right:5px;
+	height: auto;
+    width: auto;
+}
+
+#share-action ul {margin-top: 20px;}
+#share-action li {margin: 10px 0;}
+
+.social-share-right #share-title h2 {padding: 10px 0 6px;}
+.social-share-right #share-action ul {margin-top: 0; padding-bottom: 2px;}
+
+/* 2.5 Sidebar */
+#sidebar .step-info {margin-left: 10px; margin-right: 10px;}
+
+/* 2.6 Footer */
+#copyright {text-align: right;}
+#powered a {float: left;}
+
+/*-------------------------------------------------------------------------------------------*/
+/* 3. MISC */
+/*-------------------------------------------------------------------------------------------*/
+
+/* 3.1 Buttons */
+.payment-submit {text-align: center; padding: 5px 0 0;}
+.payment-submit input {padding:0;}
+
+#paypal-submit {padding-top: 15px;}
+
+#next-submit {text-align: right;}
+#next-submit input {width: auto !important;}
+
+.submit input {cursor: pointer; cursor: hand;}
+
+.bt {
+    text-shadow: 1px 1px 0 #fff;
+    font: 11px/normal sans-serif;
+    position: relative; 
+    overflow: visible; 
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none; 
+    -webkit-border-radius: 0.2em; 
+    -moz-border-radius: 0.2em; 
+    border-radius: 0.2em;
+    /* IE hacks */
+    zoom: 1; 
+}
+
+.bt span {display: block;}
+
+.fb-bt, .tw-bt {font-weight: bold;}
+.fb, .tw {margin-left: 4px; padding: 0;}
+
+.fb,
+.fb:hover,
+.fb:focus,
+.fb:active {
+    border: 1px solid #385ab1;
+    border-bottom-color: #0a2772;
+    text-decoration: none; 
+    text-shadow: -1px -1px 0 #0F1561; 
+    color: #fff !important; 
+    font-weight: bold;
+    background-color: #6484bf;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#6484bf), to(#3c579a));
+    background-image: -moz-linear-gradient(#6484bf, #3c579a);
+    background-image: -o-linear-gradient(#6484bf, #3c579a);
+    background-image: linear-gradient(#6484bf, #3c579a);    
+}
+
+.tw,
+.tw:hover,
+.tw:focus
+.tw:active {
+    border: 1px solid #a4cce5;
+    border-bottom-color: #a0baca;
+    text-decoration: none; 
+    text-shadow: 1px 1px 0 #fff; 
+    color: #186487 !important; 
+    background-color: #EAF3FA;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#d8eaf5));
+    background-image: -moz-linear-gradient(#ffffff, #d8eaf5);
+    background-image: -o-linear-gradient(#ffffff, #d8eaf5);
+    background-image: linear-gradient(#ffffff, #d8eaf5);    
+}
+
+.fb-bt span, .tw-bt span {
+    padding: 5px 10px 5px 24px;
+    background: url(../img/icons/icons.png) no-repeat;
+}
+
+.fb-bt span {background-position: 6px 3px; }
+.tw-bt span {background-position: 6px -110px;}
+
+/* 3.2 Info Message */
+#form-error, #form-valid, #form-info {margin: 10px; padding: 0 10px 10px;}
+
+#form-error {background-color: #FCEDED; border: 1px solid #A80000; color:#C00;}
+#form-valid {background: #F3FFE1; border: 1px solid #6EB500; color: #00A211;}
+#form-info {background-color: #FFF3C3;  border: 1px solid #E9DBA4; color: #000;}
+
+#form-info p {padding: 10px 0 0;}
+
+#form-error h3 {font-size: 167%; letter-spacing:-1px; color:#C00;}
+#form-error p {padding: 8px 10px 0;}
+#form-error li {list-style: square; margin: 0 15px;}
+
+#form-valid h3 {font-size: 167%; letter-spacing:-1px; padding: 10px 0 0; text-align: center;}
+
+.error {background: #FCEDED;}
+.valid {background: #F3FFE1;}
+
+.ira_payment_test_button {
+    background: #b8491a;
+    background-image: -webkit-linear-gradient(top, #b8491a, #d96e34);
+    background-image: -moz-linear-gradient(top, #b8491a, #d96e34);
+    background-image: -ms-linear-gradient(top, #b8491a, #d96e34);
+    background-image: -o-linear-gradient(top, #b8491a, #d96e34);
+    background-image: linear-gradient(to bottom, #b8491a, #d96e34);
+
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    padding: 3px 10px 3px 10px;
+    text-decoration: none;
+}
+
+.ira_payment_test_button:hover {
+
+    background: #a39223;
+    background-image: -webkit-linear-gradient(top, #a39223, #deb10d);
+    background-image: -moz-linear-gradient(top, #a39223, #deb10d);
+    background-image: -ms-linear-gradient(top, #a39223, #deb10d);
+    background-image: -o-linear-gradient(top, #a39223, #deb10d);
+    background-image: linear-gradient(to bottom, #a39223, #deb10d);
+    text-decoration: none;
+}
